@@ -1,10 +1,302 @@
-#{
-    margin: 0%;
-    padding: 0%;
+/* （重置）浏览器默认样式 */
+* {
+    margin: 0;
+    padding: 0;
+    color: #FFF;
 }
 
-body{
-    background-image: url("images/bg.jpg");
+body {
+    background: url(../images/bg.jpg) no-repeat;
     background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: coral;
+}
+
+
+.nav {
+    width: 100%;
+    height: 50px;
+    background-color: rgb(0, 253, 215);
+    padding: 8px 0px;
+    /* 只改变背景透明度，不改变其中文字、图片等透明度 */
+    background-color: rgba(0, 0, 0, 0);
+    line-height: 50px;
+    position: fixed;
+}
+
+.light {
+    background-color: #113888;
+}
+
+.logo {
+    width: 150px;
     /* background-color: red; */
+    float: left;
+    margin-left: 10%;
+}
+
+.logo>img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.nav_ul {
+    width: 800px;
+    float: left;
+    /* background-color: aliceblue; */
+}
+
+.nav_ul>ul li {
+    float: left;
+    margin-left: 50px;
+    position: relative;
+}
+
+.nav_ul_li>li img {
+    vertical-align: top;
+    width: 20px;
+    margin-top: 15px;
+    margin-right: 10px;
+}
+
+.nav_ul li ul {
+    position: absolute;
+    display: none;
+
+}
+
+/*导航-鼠标滑过*/
+.nav_ul li>a:hover {
+    color: red;
+}
+
+/*二级菜单 一些页面*/
+#Some_pages {
+    display: none;
+    width: 145px;
+    background: #FFF;
+    margin-left: -20px;
+    border-radius: 5px;
+}
+
+#Some_pages li {
+    margin-left: 20px;
+}
+
+#Some_pages li>a {
+    color: #000;
+}
+
+#Some_pages li>a:hover {
+    color: red;
+}
+
+/*二级菜单 分类*/
+#sort {
+    display: none;
+    width: 170px;
+    background: #FFF;
+    margin-left: -20px;
+    border-radius: 5px;
+}
+
+#sort li {
+    margin-left: 20px;
+}
+
+#sort li>a {
+    color: #000;
+}
+
+#sort li>a:hover {
+    color: red;
+}
+
+/* 三角形小图标 */
+.triangle {
+    width: 0px;
+    height: 0px;
+    border: 10px solid transparent;
+    border-bottom-color: #FFF;
+    margin-top: -15px;
+    display: none;
+}
+
+
+/* 搜索框 */
+.search {
+    float: left;
+    width: 260px;
+}
+
+.search>img {
+    vertical-align: top;
+    width: 20px;
+    margin-top: 17px;
+    margin-left: 2%;
+    float: right;
+}
+
+.search>input {
+    height: 25px;
+    width: 220px;
+    border-radius: 5px;
+    border: 0;
+    color: #000;
+    text-indent: 1em;
+}
+
+input:focus {
+    border-style: none;
+    outline: none;
+}
+
+
+/* ---------------------内容 */
+.center {
+    height: auto;
+    width: 1215px;
+    margin: auto;
+    /* background: red; */
+    padding-top: 80px;
+    /* 只改变背景透明度，不改变其中文字、图片等透明度 */
+    background-color: rgba(0, 0, 0, 0);
+
+}
+
+.center>.top {
+    height: 200px;
+    /* background-color: aquamarine; */
+    text-align: center;
+    line-height: 50px;
+    padding-top: 80px;
+    /* 只改变背景透明度，不改变其中文字、图片等透明度 */
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.gonggao {
+    width: 250px;
+    height: 800px;
+    float: left;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.neirong {
+    float: left;
+    width: 935px;
+    height: auto;
+    /* background-color: #FFF; */
+    margin-left: 30px;
+    /* border-radius: 5px; */
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.ggao,
+.daohang,
+.zhandian {
+    border-radius: 5px;
+
+    line-height: 30px;
+}
+
+.ggao {
+    height: 350px;
+    background-color: #113888;
+    padding: 10px;
+}
+
+.ggao>img {
+    width: 30%;
+}
+
+.daohang {
+    height: 350px;
+    background-color: blueviolet;
+    margin-top: 10px;
+
+}
+
+.daohang_name {
+    padding: 10px;
+    height: 80px;
+    /* background-color: red; */
+    text-align: center;
+
+}
+
+.daohang_nav {
+    padding: 10px;
+    height: 230px;
+    background-color: #FFF;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.daohang_nav li>a {
+    color: #000;
+}
+
+.daohang_ul>li img {
+    vertical-align: top;
+    width: 20px;
+    margin-top: 5px;
+    margin-right: 10px;
+}
+
+.zhandian {
+    height: 500px;
+    background-color: #FFF;
+    margin-top: 20px;
+    /* position: fixed;
+    z-index: 1;
+    left: 150px;
+    top: 10%; */
+}
+
+.zhandian_gd {
+    position: fixed;
+    z-index: 1;
+    left: 151px;
+    top: 10%;
+}
+
+.zhandian_ul {
+    width: 240px;
+    height: 30px;
+    padding: 5px;
+}
+
+.zhandian_ul>ul li {
+    float: left;
+    /* margin-right: 20px; */
+    margin-left: 50px;
+}
+
+.zhandian_ul>ul li>a {
+    color: #000;
+}
+
+.zhandian_ul>ul li>a:hover {
+    color: coral;
+}
+
+.neirong_list {
+    height: 300px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: #FFF;
+    color: #000;
+    padding: 5px;
 }

@@ -1,0 +1,44 @@
+/*滚动条设置*/
+::-webkit-scrollbar {
+	width: 6px;
+	/* background-color: #0B2050; */
+	background-color: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-track {
+	border-radius: 6px;
+
+	background-color: #113888;
+
+
+
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 4px;
+
+	background-color: #EF7F1C;
+
+
+}
+
+*::-webkit-media-controls-start-playback-button {
+	display: none;
+
+	-webkit-appearance: none;
+
+}
+
+*::-webkit-media-controls-panel {
+	display: none;
+
+	-webkit-appearance: none;
+
+}
+
+*::--webkit-media-controls-play-button {
+	display: none;
+
+	-webkit-appearance: none;
+
+}
