@@ -519,12 +519,7 @@ input:focus {
     margin-right: 4px;
 }
 
-/* .shijian {
-    position: absolute;
-    width: 20px;
-    margin-right: 20px;
-    left: 0;
-} */
+
 
 .neirong_neirong {
     margin-top: 10px;
@@ -540,10 +535,11 @@ input:focus {
 
 .neirong_neirong>p {
     color: #000;
+    text-indent: 2em;
 }
 
-.neirong_neirong>h3 {
-    color: #000;
+.neirong_neirong>a>h3 {
+    color: #FFBB59;
     margin-bottom: 10px;
 }
 
@@ -572,6 +568,72 @@ input:focus {
 
 .banquan>p {
     margin-bottom: 20px;
+}
+
+.banquan>p>a {
+    color: #FFBB59;
+}
+
+.banquan>p>a>img {
+    width: 20px;
+    vertical-align: top;
+    margin-top: 1px;
+}
+
+.shangxiaye {
+    height: auto;
+    text-align: center;
+    width: 610px;
+    /* margin-left: 280px; */
+    padding-top: 20px;
+    margin-bottom: 20px;
+    /* background-color: #000; */
+    background-color: rgba(0, 0, 0, 0);
+    color: #FFF;
+    padding-left: 320px;
+}
+
+.shangxiaye>ul li {
+    list-style-type: none;
+    float: left;
+    margin: 1%;
+    display: inline;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.shangxiaye>ul>li>a>img {
+    width: 20px;
+    vertical-align: top;
+    margin-top: 8px;
+}
+
+.shangxiaye>ul>li>a>img:hover {
+    color: coral;
+}
+
+.shangxiaye>ul li>a {
+    color: rgb(145, 145, 145);
+}
+
+.shangxiaye>ul li>a:hover {
+    color: #FFF;
+}
+
+.shangxiaye>ul li {
+    display: block;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 50%;
+}
+
+.shangxiaye>ul li:hover {
+    background-color: coral;
+    color: #FFF;
 }
 
 .banquan>p>img {
