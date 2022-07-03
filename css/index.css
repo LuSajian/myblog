@@ -2,13 +2,29 @@
 * {
     margin: 0;
     padding: 0;
+    /* color: rgb(221, 49, 22); */
     color: #FFF;
+}
+
+.html {
+
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    filter: grayscale(100%);
+
+
+
+}
+
+.html1 {
+    -webkit-filter: brightness(150%);
 }
 
 body {
     background: url(../images/bg.jpg) no-repeat;
     background-size: 100% 100%;
     background-attachment: fixed;
+    background-color: #000;
 }
 
 ul li {
@@ -27,12 +43,14 @@ a:hover {
 .nav {
     width: 100%;
     height: 50px;
-    background-color: rgb(0, 253, 215);
+    /* background-color: rgb(0, 253, 215); */
     padding: 8px 0px;
     /* 只改变背景透明度，不改变其中文字、图片等透明度 */
-    background-color: rgba(0, 0, 0, 0);
+    /* background-color: rgba(0, 0, 0, 0); */
     line-height: 50px;
     position: fixed;
+    cursor: pointer;
+    z-index: 1;
 }
 
 .light {
@@ -78,7 +96,11 @@ a:hover {
 
 /*导航-鼠标滑过*/
 .nav_ul li>a:hover {
-    color: red;
+    color: #FFBB59;
+}
+
+.nav_ul li:hover {
+    color: #FFBB59;
 }
 
 /*二级菜单 一些页面*/
@@ -99,7 +121,7 @@ a:hover {
 }
 
 #Some_pages li>a:hover {
-    color: red;
+    color: coral;
 }
 
 /*二级菜单 分类*/
@@ -120,7 +142,7 @@ a:hover {
 }
 
 #sort li>a:hover {
-    color: red;
+    color: coral;
 }
 
 /* 三角形小图标 */
@@ -133,12 +155,58 @@ a:hover {
     display: none;
 }
 
+.triangle1 {
+    width: 0px;
+    height: 0px;
+    border: 10px solid transparent;
+    border-bottom-color: #FFF;
+    margin-top: -15px;
+    display: none;
+}
+
+.music {
+    width: 180px;
+    height: 30px;
+    /* background-color: red; */
+    position: fixed;
+    right: 200px;
+    top: 14px;
+    display: block;
+}
+
+/* .music1 {
+    width: 200px;
+    height: 30px;
+    background-color: red;
+    position: fixed;
+    right: 150px;
+    top: 30px;
+    display: none;
+} */
+
+.music_top {
+    height: 30px;
+    /* background: #FFBB59; */
+}
+
+.music_top>img {
+    width: 20px;
+    margin-right: 30px;
+}
+
+/* .music_bottom {
+    height: 10px;
+    background: blue;
+} */
+
+
 
 /* 搜索框 */
 .search {
     float: left;
     width: 260px;
 }
+
 
 .search>img {
     vertical-align: top;
@@ -155,7 +223,9 @@ a:hover {
     border: 0;
     color: #000;
     text-indent: 1em;
+    /* display: none; */
 }
+
 
 input:focus {
     border-style: none;
@@ -207,7 +277,7 @@ input:focus {
 .daohang,
 .zhandian {
     border-radius: 5px;
-
+    /* color: #000; */
     line-height: 30px;
 }
 
@@ -215,6 +285,10 @@ input:focus {
     height: 350px;
     background-color: #113888;
     padding: 10px;
+}
+
+.ggao>h4 {
+    color: #FFBB59;
 }
 
 .ggao>img {
@@ -231,8 +305,13 @@ input:focus {
 .daohang_name {
     padding: 10px;
     height: 80px;
-    /* background-color: red; */
+    background-color: #113888;
     text-align: center;
+
+}
+
+.daohang_name>h4 {
+    color: #FFBB59;
 
 }
 
@@ -259,10 +338,7 @@ input:focus {
     height: 500px;
     background-color: #FFF;
     margin-top: 20px;
-    /* position: fixed;
-    z-index: 1;
-    left: 150px;
-    top: 10%; */
+    color: #000;
 }
 
 .zhandian_gd {
@@ -276,16 +352,113 @@ input:focus {
     width: 240px;
     height: 30px;
     padding: 5px;
+    /* background-color: #FFBB59; */
+}
+
+.zdinfo {
+    color: #000;
+    width: 240px;
+    padding: 5px;
+    height: auto;
+    /* background-color: red; */
+    text-align: center;
+    color: #000;
+}
+
+.zdinfo span {
+    color: #000;
+}
+
+.zdinfo span>a {
+    margin-right: 10px;
+    color: #000;
+}
+
+.zdinfo span>a:hover {
+    color: coral;
+    ;
+}
+
+.zdinfo>a {
+    color: #000;
+    margin-left: -5px;
+    display: inline;
+}
+
+.zdinfo>a>img {
+    width: 20px;
+    vertical-align: top;
+    margin-top: 5px;
+    margin-right: 4px;
+    /* margin: 5px; */
+}
+
+.gninfo {
+    color: #000;
+
+}
+
+.zuixin_article>h4 {
+    color: coral;
+    /* background-color: red; */
+    text-align: center;
+    margin-top: 10px;
+}
+
+.zuixin_article {
+    height: auto;
+    /* background-color: red; */
+}
+
+.zuixin_article>p {
+    color: #000;
+    text-indent: 2em;
+    width: 223px;
+    height: 30px;
+    overflow: hidden;
+
+}
+
+.zuixin_article>p>a {
+    color: #000;
+    border-left: 4px coral solid;
+    padding-left: 2px;
+
+}
+
+.zuixin_article>p>a:hover {
+    color: coral;
+
+}
+
+
+.zdinfo>a:hover {
+    color: coral;
+}
+
+
+
+
+.zdinfo>img {
+    width: 100px;
+    border-radius: 50%;
+    margin-top: 20px;
+    border: #000 1px solid;
 }
 
 .zhandian_ul>ul li {
     float: left;
     /* margin-right: 20px; */
     margin-left: 50px;
+    color: #113888;
 }
 
-.zhandian_ul>ul li>a {
-    color: #000;
+.light_li {
+    border-bottom: #113888 2px solid;
+}
+
+.zhandian_ul>ul li {
+    cursor: pointer;
 }
 
 .zhandian_ul>ul li>a:hover {
@@ -293,10 +466,143 @@ input:focus {
 }
 
 .neirong_list {
-    height: 300px;
+    height: 600px;
     margin-bottom: 20px;
     border-radius: 5px;
     background-color: #FFF;
     color: #000;
     padding: 5px;
+    overflow: hidden;
+    overflow-wrap: break-word;
+}
+
+.neirong_listImg {
+    height: 400px;
+    position: relative;
+    color: #000;
+    text-align: center;
+}
+
+.neirong_listImg>a {
+    width: 500px;
+    color: coral;
+    position: absolute;
+    /* background-color: rebeccapurple; */
+    font-size: 30px;
+    left: 0%;
+    top: 50%;
+    display: inline;
+    padding-left: 20%;
+
+}
+
+.neirong_listImg>img {
+    width: 100%;
+    height: 100%;
+}
+
+.neirong_neirong>span {
+    position: absolute;
+    left: 0;
+    margin-top: -35px;
+    width: 500px;
+    margin-left: 650px;
+    color: #000;
+    /* background-color: #000; */
+    display: inline;
+}
+
+.neirong_neirong>span>img {
+    width: 20px;
+    vertical-align: top;
+    margin-top: 2px;
+    margin-right: 4px;
+}
+
+/* .shijian {
+    position: absolute;
+    width: 20px;
+    margin-right: 20px;
+    left: 0;
+} */
+
+.neirong_neirong {
+    margin-top: 10px;
+    color: #000;
+    height: 75px;
+    /* background-color: #113888; */
+    padding: 20px;
+    /* text-indent: 2em; */
+    overflow: hidden;
+    overflow-wrap: break-word;
+    position: relative;
+}
+
+.neirong_neirong>p {
+    color: #000;
+}
+
+.neirong_neirong>h3 {
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.neirong_biaoqian {
+    margin-bottom: 20px;
+    margin-top: 30px;
+    height: 40px;
+    text-indent: 2em;
+    color: coral;
+    font-weight: bolder;
+    /* background-color: red; */
+}
+
+.neirong_biaoqian>a {
+    color: #000;
+    margin-left: 20px;
+}
+
+.banquan {
+    height: auto;
+    text-align: center;
+    padding-top: 20px;
+    background-color: #113888;
+    color: #FFF;
+}
+
+.banquan>p {
+    margin-bottom: 20px;
+}
+
+.banquan>p>img {
+    width: 20px;
+    vertical-align: top;
+    margin-top: 2px;
+    margin-right: 2px;
+}
+
+/* 侧边换肤功能 */
+.skin_peeler {
+    width: 50px;
+    height: 200px;
+    /* background: #000; */
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+}
+
+.skin_peeler1 {
+    width: 30px;
+    height: 30px;
+    background: red;
+    margin: 8px;
+    border-radius: 5px;
+    background-color: #FFF;
+}
+
+.skin_peeler1>img,
+.skin_peeler1>a>img {
+    width: 20px;
+    margin-left: 5px;
+    margin-top: 5px;
 }
