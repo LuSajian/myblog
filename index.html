@@ -9,6 +9,15 @@
     <link rel="shortcut icon" href="images/logo.gif">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/dungongtiao.css">
+
+
+    <!-- 网站样式 -->
+    <!-- <link href="red.css" rel="alternate stylesheet" type="text/css" title="红色">
+    <link href="green.css" rel="alternate stylesheet" type="text/css" title="绿色">
+    <link href="black.css" rel="alternate stylesheet" type="text/css" title="黑色"> -->
+
+
+
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/index.js"></script>
 </head>
@@ -26,20 +35,19 @@
         <div class="nav_ul">
             <ul class="nav_ul_li">
                 <li><a href=""><img src="images/首页.png" alt="">首页</a></li>
-                <li onmouseover="document.getElementById('Some_pages').style.display = 'block'; "
-                    onmouseout="document.getElementById('Some_pages').style.display = 'none';">
+                <li id="yemian">
                     <img src="images/页面.png" alt="">
                     一些页面
-                    <div class="triangle"></div>
-                    <ul id="Some_pages">
+                    <!-- 三角形 -->
+                    <div class="triangle1"></div>
+                    <ul id="Some_pages" class="Some_pages">
                         <li><a href=""><img src="images/留言.png" alt="">留言板</a></li>
                         <li><a href=""><img src="images/隐私政策.png" alt="">隐私政策</a></li>
                     </ul>
                 </li>
-                <li onmouseover="document.getElementById('sort').style.display = 'block'; "
-                    onmouseout="document.getElementById('sort').style.display = 'none' ;"><img src="images/分类.png"
-                        alt="">
+                <li id="fenlei"><img src="images/分类.png" alt="">
                     分类
+                    <!-- 三角形 -->
                     <div class="triangle"></div>
                     <ul id="sort">
                         <li><a href=""><img src="images/留言.png" alt="">编程上的内容</a></li>
@@ -55,11 +63,32 @@
             </ul>
         </div>
 
+        <!-- 音乐 -->
+        <div class="music">
+            <!-- <audio src="../medio/花海.mp3" loop="loop" controls="controls" autoplay="autoplay"></audio> -->
+            <audio id="player" src="images/李浩然 - 一千零一次我爱你.mp3"></audio>
+            <audio id="player1" src="images/蔡文姬、澜 - 头顶的风 (片段).mp3"></audio>
+            <audio id="player2" src="images/Dear Jane - 无可避免.kgm"></audio>
+            <div class="music_top">
+                <img src="images/上一首.png" alt="" onclick="shangyishou()">
+                <img class="bofan" src="images/暂停.png" alt="" onclick="bofang()">
+                <img src="images/下一首.png" alt="" onclick="xiayisohu()">
+
+            </div>
+            <div class="music_bottom"></div>
+
+        </div>
         <!-- 搜索框 -->
         <div class="search">
-            <input type="text" placeholder="搜索什么...">
+            <input type="hidden" placeholder="点击回车开始搜索..." class="search_input" id="search_input"
+                onkeydown="EnterKey()">
+            <!-- <audio src="images\李浩然 - 一千零一次我爱你.mp3" controls="controls" autoplay="autoplay"></audio> -->
             <img src="images/搜索.png" alt="" onclick="search()">
         </div>
+
+
+
+
     </div>
 
     <!-- 内容--------------------------------------- -->
@@ -98,9 +127,54 @@
                 <div class="zhandian">
                     <div class="zhandian_ul">
                         <ul>
-                            <li><a href="">站点预览</a></li>
-                            <li><a href="">功能</a></li>
+                            <li onclick="zd()" class="zd">站点预览</li>
+                            <li onclick="gn()" class="gn">功能</li>
                         </ul>
+                    </div>
+
+                    <div class="zdinfo">
+                        <img src="images/头像.png" alt=""><br>
+                        MyNameLHH <br><br>
+                        <span>18&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                        <span>18&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                        <span>18&nbsp;&nbsp;&nbsp;</span><br>
+                        <span><a href="">文章</a>
+                        </span>
+                        <span><a href="">分类</a></span>
+                        <span><a href="">标签</a></span>
+                        <br><br>
+                        <a href=""><img src="images/简介.png" alt="">简介</a> &nbsp;&nbsp;
+                        <a href=""><img src="images/文章.png" alt="">文章</a>
+                        <br>
+                        <a href=""><img src="images/邮箱.png" alt="">邮箱</a>&nbsp;&nbsp;
+                        <a href=""><img src="images/留言.png" alt="">留言</a><br><br>
+                        <a href=""><img src="images/个人简历.png" alt="">个人简历</a><br>
+                        <a href=""><img src="images/链接.png" alt="">友情链接</a>
+                    </div>
+
+                    <div class="gninfo">
+                        <div class="zuixin_article">
+                            <h4>最新文章</h4>
+                            <p><a href="">我是文章我是文woffaffa渣攻干ffafa</a> </p>
+                            <p><a href="">我是文章我是文woffaffaffafa</a> </p>
+
+
+                        </div>
+
+                        <div class="zuixin_article">
+                            <h4>文章归档</h4>
+                            <p><a href="">我是文章我是文woffaffa渣攻干ffafa</a> </p>
+
+
+                        </div>
+
+                        <div class="zuixin_article">
+                            <h4>标签云</h4>
+                            <p><a href="">我是文章我是文woffaffa渣攻干ffafa</a> </p>
+                            <p><a href="">我是文章我是文woffaffaffafa</a> </p>
+
+
+                        </div>
                     </div>
 
                 </div>
@@ -109,19 +183,185 @@
             </div>
 
             <div class="neirong">
-                <div class="neirong_list">内容</div>
-                <div class="neirong_list">内容</div>
-                <div class="neirong_list">内容</div>
-                <div class="neirong_list">内容</div>
-                <div class="neirong_list">内容</div>
-                <div class="neirong_list">内容</div>
-                <div class="neirong_list">内容</div>
-                <div class="neirong_list">内容</div>
+                <div class="neirong_list">
+                    <div class="neirong_listImg">
+                        <img src="images/wenzhang4.png" alt="">
+                        <!-- <a href="">文字在图图片上方文字在片上方</a>
+                        <span>
+                            <img src="/images/时间.png" alt="">2022:11:11&nbsp;&nbsp;
+                            <img src="/images/浏览.png" alt="">10&nbsp;&nbsp;
+                            <img src="/images/统计.png" alt="">500字体
+                        </span> -->
+                    </div>
+
+                    <div class="neirong_neirong">
+                        <h3>我是标题</h3>
+                        <span>
+                            <img src="/images/时间.png" alt="">2022:11:11&nbsp;&nbsp;
+                            <img src="/images/浏览.png" alt="">10&nbsp;&nbsp;
+                            <img src="/images/统计.png" alt="">500字体
+                        </span>
+                        <p>下载安装Typora通过官网下载下载安装Typora通过官网下载下载安装Typora通过官网下载下载安装Typora通过官网下载下载安装Typora通过官网下载下载安装Typora通过官网下载下载安装Typora通过官网下载下载安装Typora通过官网下载下载安装Typora通过官网下载下载安装Typora通过官网下载下载安装Typora通过官网下载
+                        </p>
+                    </div>
+                    <div class="neirong_biaoqian">标签：<a href="">Typora</a>
+                        <a href="">软件</a>
+                        <a href="">java</a>
+                        <a href="">前端</a>
+                        <a href="">后端</a>
+
+                    </div>
+
+                </div>
+
+                <div class="neirong_list">
+                    <div class="neirong_listImg">
+                        <img src="images/wenzhang3.png" alt="">
+                        <!-- <a href="">文字在图图片上方文字在片上方</a>
+                                        <span>
+                                            <img src="/images/时间.png" alt="">2022:11:11&nbsp;&nbsp;
+                                            <img src="/images/浏览.png" alt="">10&nbsp;&nbsp;
+                                            <img src="/images/统计.png" alt="">500字体
+                                        </span> -->
+                    </div>
+
+                    <div class="neirong_neirong">
+                        <h3>我是标题</h3>
+                        <span>
+                            <img src="/images/时间.png" alt="">2022:11:11&nbsp;&nbsp;
+                            <img src="/images/浏览.png" alt="">10&nbsp;&nbsp;
+                            <img src="/images/统计.png" alt="">500字体
+                        </span>
+                        <p>下载安装Typora通过官网下载下载安装Typora通过官网下载下载安装Typora通过官网下载下载安装Typora通过官网下载下载安装Typora通过官网下载下载安装Typora通过官网下载下载安装Typora通过官网下载下载安装Typora通过官网下载下载安装Typora通过官网下载下载安装Typora通过官网下载下载安装Typora通过官网下载
+                        </p>
+                    </div>
+                    <div class="neirong_biaoqian">标签：<a href="">Typora</a>
+                        <a href="">软件</a>
+                        <a href="">java</a>
+                        <a href="">前端</a>
+                        <a href="">后端</a>
+
+                    </div>
+
+                </div>
+
+                <div class="neirong_list">
+                    <div class="neirong_listImg">
+                        <img src="images/wenzhang2.png" alt="">
+                        <!-- <a href="">文字在图图片上方文字在片上方</a>
+                                        <span>
+                                            <img src="/images/时间.png" alt="">2022:11:11&nbsp;&nbsp;
+                                            <img src="/images/浏览.png" alt="">10&nbsp;&nbsp;
+                                            <img src="/images/统计.png" alt="">500字体
+                                        </span> -->
+                    </div>
+
+                    <div class="neirong_neirong">
+                        <h3>我是标题</h3>
+                        <span>
+                            <img src="/images/时间.png" alt="">2022:11:11&nbsp;&nbsp;
+                            <img src="/images/浏览.png" alt="">10&nbsp;&nbsp;
+                            <img src="/images/统计.png" alt="">500字体
+                        </span>
+                        <p>下载安装Typora通过官网下载下载安装Typora通过官网下载下载安装Typora通过官网下载下载安装Typora通过官网下载下载安装Typora通过官网下载下载安装Typora通过官网下载下载安装Typora通过官网下载下载安装Typora通过官网下载下载安装Typora通过官网下载下载安装Typora通过官网下载下载安装Typora通过官网下载
+                        </p>
+                    </div>
+                    <div class="neirong_biaoqian">标签：<a href="">Typora</a>
+                        <a href="">软件</a>
+                        <a href="">java</a>
+                        <a href="">前端</a>
+                        <a href="">后端</a>
+
+                    </div>
+
+                </div>
+
+                <div class="neirong_list">
+                    <div class="neirong_listImg">
+                        <img src="images/wenzhang3.png" alt="">
+                        <!-- <a href="">文字在图图片上方文字在片上方</a>
+                                        <span>
+                                            <img src="/images/时间.png" alt="">2022:11:11&nbsp;&nbsp;
+                                            <img src="/images/浏览.png" alt="">10&nbsp;&nbsp;
+                                            <img src="/images/统计.png" alt="">500字体
+                                        </span> -->
+                    </div>
+
+                    <div class="neirong_neirong">
+                        <h3>我是标题</h3>
+                        <span>
+                            <img src="/images/时间.png" alt="">2022:11:11&nbsp;&nbsp;
+                            <img src="/images/浏览.png" alt="">10&nbsp;&nbsp;
+                            <img src="/images/统计.png" alt="">500字体
+                        </span>
+                        <p>下载安装Typora通过官网下载下载安装Typora通过官网下载下载安装Typora通过官网下载下载安装Typora通过官网下载下载安装Typora通过官网下载下载安装Typora通过官网下载下载安装Typora通过官网下载下载安装Typora通过官网下载下载安装Typora通过官网下载下载安装Typora通过官网下载下载安装Typora通过官网下载
+                        </p>
+                    </div>
+                    <div class="neirong_biaoqian">标签：<a href="">Typora</a>
+                        <a href="">软件</a>
+                        <a href="">java</a>
+                        <a href="">前端</a>
+                        <a href="">后端</a>
+
+                    </div>
+
+                </div>
+
+                <div class="neirong_list">
+                    <div class="neirong_listImg">
+                        <img src="images/wenzhang4.png" alt="">
+                        <!-- <a href="">文字在图图片上方文字在片上方</a>
+                                        <span>
+                                            <img src="/images/时间.png" alt="">2022:11:11&nbsp;&nbsp;
+                                            <img src="/images/浏览.png" alt="">10&nbsp;&nbsp;
+                                            <img src="/images/统计.png" alt="">500字体
+                                        </span> -->
+                    </div>
+
+                    <div class="neirong_neirong">
+                        <h3>我是标题</h3>
+                        <span>
+                            <img src="/images/时间.png" alt="">2022:11:11&nbsp;&nbsp;
+                            <img src="/images/浏览.png" alt="">10&nbsp;&nbsp;
+                            <img src="/images/统计.png" alt="">500字体
+                        </span>
+                        <p>下载安装Typora通过官网下载下载安装Typora通过官网下载下载安装Typora通过官网下载下载安装Typora通过官网下载下载安装Typora通过官网下载下载安装Typora通过官网下载下载安装Typora通过官网下载下载安装Typora通过官网下载下载安装Typora通过官网下载下载安装Typora通过官网下载下载安装Typora通过官网下载
+                        </p>
+                    </div>
+                    <div class="neirong_biaoqian">标签：<a href="">Typora</a>
+                        <a href="">软件</a>
+                        <a href="">java</a>
+                        <a href="">前端</a>
+                        <a href="">后端</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!--版权信息-->
+            <div class="neirong_list banquan">
+                <P>© 2022 MyNameLHH </P>
+                <p> <img src="images/备案.png" alt=""> 桂ICP备2021009738号-1</p>
+                <P></P>
             </div>
         </div>
+    </div>
 
 
     </div>
+
+
+    <!-- 侧边换肤功能 -->
+    <div class="skin_peeler">
+        <div class="skin_peeler1"><a href=""><img src="images/置顶蓝.png" alt="" title="置顶"></a></div>
+        <div class="skin_peeler1"><a href=""><img src="images/评论蓝.png" alt="" title="评论"></a></div>
+        <div class="skin_peeler1"><img src="images/月亮蓝.png" alt="" title="皮肤" onclick="huanse()"></div>
+        <div class="skin_peeler1"><img src="images/设置蓝.png" alt="" title="设置"></div>
+    </div>
+
+
 
 </body>
 
