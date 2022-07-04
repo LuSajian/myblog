@@ -1,23 +1,25 @@
 /*滚动条设置*/
 ::-webkit-scrollbar {
-	width: 6px;
+	width: 5px;
 	/* background-color: #0B2050; */
 	background-color: rgba(0, 0, 0, 0);
+	/* background-color: #FFF; */
 }
 
 ::-webkit-scrollbar-track {
-	border-radius: 6px;
+	border-radius: 2px;
 
-	background-color: #113888;
+	/* background-color: #113888; */
+	background-color: rgba(0, 0, 0, 0);
 
 
 
 }
 
 ::-webkit-scrollbar-thumb {
-	border-radius: 4px;
+	border-radius: 10px;
 
-	background-color: #EF7F1C;
+	background-color: #1AFA29;
 
 
 }

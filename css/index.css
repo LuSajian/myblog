@@ -326,7 +326,7 @@ input:focus {
     height: 100px;
     background-color: #113888;
     text-align: center;
-
+    border-radius: 5px;
 }
 
 .daohang_name>h4 {
@@ -335,29 +335,34 @@ input:focus {
 }
 
 .daohang_nav {
-    padding: 10px;
     height: auto;
-    padding-left: 20px;
     background-color: #FFF;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
+    padding-bottom: 20px;
+    padding-top: 15px;
 }
 
 .daohang_nav li {
     display: inline;
-    width: 50px;
+    /* width: 140px; */
+    /* margin-bottom: 20px; */
+    padding-top: 20px;
 }
 
 .daohang_nav li>a {
     color: #000;
     /* background-color: red; */
-    width: 210px;
+    /* width: 210px; */
+    /* line-height: 0%; */
     display: block;
-    margin-top: 4px;
+    /* margin-top: 4px; */
+    margin-bottom: 5px;
+    padding-left: 15px;
 }
 
 .daohang_nav li>a:hover {
-    background-color: #FFBB59;
+    background-color: #b4b4b4;
     color: #FFF;
 }
 
@@ -374,13 +379,14 @@ input:focus {
     background-color: rgba(0, 0, 0, 0);
     margin-top: 20px;
     color: #000;
+    border-radius: 5px;
 }
 
 .zhandian_gd {
     position: fixed;
     z-index: 1;
-    left: 151px;
-    top: 10%;
+    left: 160px;
+    top: 80px;
 }
 
 .zhandian_ul {
@@ -389,6 +395,7 @@ input:focus {
     padding: 5px;
     background-color: #FFF;
     /* background-color: #FFBB59; */
+    border-radius: 5px 5px 0px 0px;
 }
 
 .zdinfo {
@@ -401,6 +408,7 @@ input:focus {
     text-align: center;
     color: #000;
     padding-bottom: 20px;
+    border-radius: 0px 0px 5px 5px;
 }
 
 .zdinfo span {
@@ -441,6 +449,7 @@ input:focus {
     /* 这个会强制文字在同一行显示 */
     /* white-space: nowrap; */
     overflow-x: hidden;
+    border-radius: 0px 0px 10px 5px;
 }
 
 .zuixin_article>h4 {
