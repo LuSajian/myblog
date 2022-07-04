@@ -5,6 +5,7 @@ $(function () {
     zhandian();
     $(".zd").addClass("light_li");
     $(".zuixin_article").css("display", "none");
+    $(".gninfo").css("display", "none");
     // 滚动条
     $(window).scroll(function () {
         navHeader();
